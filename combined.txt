@@ -1,0 +1,1287 @@
+"""10. Using bitwise operators:
+Input 	a = 10
+		b = 20
+		c = 3
+WAPTP output of below
+a&b
+a|b
+a^b
+(~a)
+a<<b
+c>>3"""
+a=10
+b=20
+c=3
+print(a&b)
+print(a|b)
+print(a^b)
+print(~a)
+print(a<<b)
+print(c>>3)
+"""Output
+0
+30
+30
+-11
+10485760
+0
+"""#11. Using Ternary operator or COnditional operator: Identify minimum of two numbers
+a=int(input())
+b=int(input())
+if(a>b):
+    print("a is greater")
+else:
+    print("b is greater")
+"""Output
+23
+55
+b is greater
+"""#12. Using Ternary operator or COnditional operator: Identify minimum of three numbers
+a=int(input())
+b=int(input())
+c=int(input())
+if(a<b and a<c):
+    print(a,"is minimum")
+elif(b<c and b<a):
+    print(b,"is minimum")
+else:
+    print(c,"is minimum")
+
+"""Output
+2
+5
+8
+2 is minimum"""#13. Using Ternary operator or COnditional operator: Identify maximum of three numbers
+a=int(input())
+b=int(input())
+c=int(input())
+if(a>b and a>c):
+    print(a,"is maximum")
+elif(b>c and b>a):
+    print(b,"is maximum")
+else:
+    print(c,"is maximum")
+
+"""Output
+2
+5
+8
+8 is maximum""""""14. Special operators
+	Write note on Identity operator
+	Write note on membership operator"""
+
+"""Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location. eg- is, is not
+Membership operators are used to test if a sequence is presented in an object. eg- in, not in
+""""""15. Using Identity operator: WAPTP whether both variables are pointing to same addres or note
+	1. a = 10 b = 10
+	2. a = 20 b = 10
+	3. a = ["one","two","three"] b = ["one","two","three"]"""
+a=10
+b=10
+print(a is b)
+a=20
+b=10
+print(a is b)
+a=["one","two","three"]
+b = ["one","two","three"]
+print(a is b)
+"""Output
+True
+False
+False
+""""""16. Using membership operator: WAP to check whether blow string are present in str1 = "welcome to chistats pvt ltd"
+'a'
+'z'
+'x'
+'c'
+'d'
+'ltd'
+'chistats'"""
+str1 = "welcome to chistats pvt ltd"
+print('a' in str1)
+print('z' in str1)
+print('x' in str1)
+print('c' in str1)
+print('d' in str1)
+print('ltd' in str1)
+print('chistats' in str1)
+
+"""Output
+True
+False
+False
+True
+True
+True
+True
+"""
+"""17. Arrange below operators in the proper precedence
+()
+**
+~
+and
+or
+&
+^
+|
+/
+%
+//
++
+- (Minus)
+- (Unary minus)
+*
+<<
+>>
+is
+is not
+!=
+not
+in
+not in
+>
+>=
+<
+<=
+=="""
+
+"""Output
+()
+**
+*,/,//
++,-
+>>
+&
+^
+|
+==
+si not, in
+not
+and
+or
+""""""18. For input a = 30 b = 20 c = 10 d = 5 print the output of below
+((a+b)*c/d)
+((a+b)*(c/d))
+(a+(b*c)/d)
+
+Explain the precedence"""
+a=30
+b=20
+c=10
+d=5
+print((a+b)*c/d)
+print((a+b)*(c/d))
+print((a+(b*c)/d))
+"""Output
+100.0
+100.0
+70.0
+first () is operated after that arthmetic operators like +,-,/
+""""""19. WAP to create an array of 10 integers and display the array items. Access individual element through indexes."""
+
+l=[]
+l=[int(x) for x in input().split()]
+for i in range(len(l)):
+    print(l[i])
+
+"""Output
+1 2 3 4 5 6 7 8 9 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+""""""2. Input : a = 20 b = 4
+Note down the output of below operations
+a+b
+a-b
+a*b
+a/b
+a//b
+a%b
+a**b"""
+
+a=20
+b=4
+print(a+b)
+print(a-b)
+print(a/b)
+print(a//b)
+print(a%b)
+print(a**b)
+
+"""Output
+24
+16
+5.0
+5
+0
+160000
+""""""20. WAP to append new element at the end of an array"""
+l=[]
+l=[int(x) for x in input().split()]
+print(l)
+l.append(int(input()))
+print(l)
+"""Output
+1 2 3 4
+[1, 2, 3, 4]
+5
+[1, 2, 3, 4, 5]
+"""#21. WAP to reverse an array
+l=[]
+l=[int(x) for x in input().split()]
+d=l[::-1]
+print(l)
+print(d)
+"""Output
+1 2 3 4
+[1, 2, 3, 4]
+[4, 3, 2, 1]
+""""""22. WAP to get the current memory address and the length in elements of the buffer used to hold an array's contents and also find the size of the memory buffer in bytes"""
+
+from array import *
+num = array('i', [1, 3, 5, 7, 9])
+print("Original array: "+str(num))
+print("Current memory address and the length in elements of the buffer: "+str(num.buffer_info()))
+print("The size of the memory buffer in bytes: "+str(num.buffer_info()[1] * num.itemsize))
+
+"""Output
+Original array: array('i', [1, 3, 5, 7, 9])
+Current memory address and the length in elements of the buffer: (2873883932080, 5)
+The size of the memory buffer in bytes: 20
+"""#23. WAP to get the number of occurrences of a specified element in an array
+
+l=[]
+l=[int(x) for x in input().split()]
+x=int(input())
+print(l.count(x))
+"""Output
+1 2 3 4 3 9 3
+3
+3
+"""#24. WAP to get largest element from array
+l=[]
+l=[int(x) for x in input().split()]
+m=max(l)
+print(m)
+"""Output
+1 3 6 8 2
+8
+"""#25. WAP to get average of integers present in array
+l=[]
+l=[int(x) for x in input().split()]
+sum=0
+for i in l:
+    sum+=i
+print(sum//len(l))
+"""Output
+1 2 3 4 5
+3"""#26. Create an array of size 10 and insert new element at position 3 and 7 and update the position 2
+l=[1,2,3,4,5,6,7,8,9,10]
+print(l)
+pos3=33
+pos7=77
+print("updated list")
+l.insert(2,pos3)
+l.insert(6,pos7)
+print(l)#27. WAP to remove a elemnt from 5th position using the index from above array
+l=[1,2,3,4,5,6,7,8,9]
+print(l)
+print("Updated list")
+l.pop(4)
+print(l)
+"""Output
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+Updated list
+[1, 2, 3, 4, 6, 7, 8, 9]
+"""#28. WAP to convert an array to an ordinary list with the same item
+from array import *
+array_num = array('i', [1, 3, 5, 3, 7, 1, 9, 3])
+print("Original array: "+str(array_num))
+num_list = array_num.tolist()
+print("Converted list")
+print(num_list)
+
+"""Output
+Original array: array('i', [1, 3, 5, 3, 7, 1, 9, 3])
+Converted list
+[1, 3, 5, 3, 7, 1, 9, 3]""""""29. WAP to remove duplicates from an array"""
+l=[]
+l=[int(x) for x in input().split()]
+l1=[]
+for i in l:
+    if(i not in l1):
+        l1.append(i)
+print(l)
+print(l1)
+"""Output
+1 1 4 4 7 7 7
+[1, 1, 4, 4, 7, 7, 7]
+[1, 4, 7]
+"""
+"""3. Note down the output of below operations
+
+Input : a = 10 b = 2
+a/b
+a//b
+
+Input : a = 10.0 b = 2
+a/b
+a//b"""
+a=10
+b=2
+print(a/b)
+print(a//b)
+
+a=10.0
+b=2
+print(a/b)
+print(a//b)
+
+"""Output
+5.0
+5
+5.0
+5.0
+Reason for the difference in values is since we are taking float in second case that's why the answer is in float
+"""#30. WAP to get length of an array
+l=[]
+l=[int(x) for x in input().split()]
+print(len(l))
+"""Output
+1 2 3 4 5
+5
+"""#31. WAP to find the missing number in a given array of numbers between 20 to 50
+l=[]
+for i in range(29,51):
+    l.append(i)
+l.sort()
+for i in range(len(l)-1):
+    if(l[i]+1)!=l[i+1]:
+        print(l[i]+1)#32. WAP to rotate an array. Ex. Input array [1, 2, 3, 4, 5, 6, 7] Output [7, 6, 5, 4, 3, 2, 1]
+l=[1,2,3,4,5,6,7]
+l1=l[::-1]
+print(l)
+print(l1)
+"""Output
+[1, 2, 3, 4, 5, 6, 7]
+[7, 6, 5, 4, 3, 2, 1]
+"""#33. WAP to split the array and add the first part to the end
+l=[1,2,3,4,5,6,7,8]
+l1=[]
+for i in range(len(l)//2,len(l)):
+    l1.append(l[i])
+for i in range(len(l)//2):
+    l1.append(l[i])
+print(l)
+print(l1)
+
+"""Output
+[1, 2, 3, 4, 5, 6, 7, 8]
+[5, 6, 7, 8, 1, 2, 3, 4]
+"""#34. WAP to find reminder of array multiplication divided by n
+l=[1,2,3,4,5,6]
+n=int(input())
+for i in range(len(l)):
+    print(l[i]/n)
+
+"""Output
+3
+0.3333333333333333
+0.6666666666666666
+1.0
+1.3333333333333333
+1.6666666666666667
+2.0
+"""#35. WAP to check if given array is Monotonic
+import copy
+l=[1,2,5,7,8]
+flag=0
+for i in range(len(l)-1):
+    if(l[i+1]<l[i]):
+        flag=1
+if(flag==1):
+    print("Not monotonic")
+else:
+    print("Monotonic")
+
+"""36. Have the function ArrayMatching(strArr) read the array of strings stored in strArr which will contain only two elements, both of which will represent an array of positive integers. For example: if strArr is ["[1, 2, 5, 6]", "[5, 2, 8, 11]"], then both elements in the input represent two integer arrays, and your goal for this challenge is to add the elements in corresponding locations from both arrays. For the example input, your program should do the following additions: [(1 + 5), (2 + 2), (5 + 8), (6 + 11)] which then equals [6, 4, 13, 17]. Your program should finally return this resulting array in a string format with each element separated by a hyphen: 6-4-13-17."""
+import numpy as np
+
+def Match(strArr):
+    Arr_0 = []
+    Arr_1 = []
+    k = ''
+
+    for i in (k.join(strArr[0].split(' '))).replace(",", ' ').replace("[", '').replace(']', '').split(' '):
+        if i.isdigit():
+            Arr_0.append(int(i))
+    for i in (k.join(strArr[1].split(' '))).replace(",", ' ').replace("[", '').replace(']', '').split(' '):
+        if i.isdigit():
+            Arr_1.append(int(i))
+
+    arr1 = np.array(Arr_0)
+    arr2 = np.array(Arr_1)
+    m = ''
+
+    if len(arr1) < len(arr2):
+        new = arr2.copy()
+        new[:len(arr1)] += arr1
+        m = ''
+        for i in new:
+            m += str(i) + '-'
+        return m[:-1]
+    elif len(arr1) > len(arr2):
+        new = arr1.copy()
+        new[:len(arr2)] += arr2
+        for i in new:
+            m += str(i) + '-'
+        return m[:-1]
+    else:
+        new = np.array(Arr_0) + np.array(Arr_1)
+        for i in new:
+            m += str(i) + '-'
+        return m[:-1]
+
+strArr = ["[5, 2, 3]", "[2, 2, 3, 10, 6]"]
+print(Match(strArr))
+strArr = ["[1, 2, 5, 6]", "[5, 2, 8, 11]"]
+print(Match(strArr))
+strArr =  ["[1, 2, 1]", "[2, 1, 5, 2]"]
+print(Match(strArr))
+
+"""Output
+7-4-6-10-6
+6-4-13-17
+3-3-6-2""""""37. WAP to print output of below slicing options
+Input array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Operations
+	1. a[3:8]
+	2. a[5:]
+	3. a[:]"""
+
+a=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(a[3:8])
+print(a[5:])
+print(a[:])
+"""Output
+[4, 5, 6, 7, 8]
+[6, 7, 8, 9, 10]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+"""#38. WAP to search en element 7 in the array [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8 ,9, 10])
+
+x = np.where(arr == 7)
+
+print(x)
+"""Output
+7
+"""#39. WAP to add and multiply two 3x3 matrices.
+
+A = [[12, 7, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+
+# take a 3x4 matrix
+B = [[5, 8, 1],
+     [6, 7, 3],
+     [4, 5, 9]]
+result = [[0,0,0],
+        [0,0,0],
+        [0,0,0]]
+print("Multiplication")
+for i in range(len(A)):
+
+    for j in range(len(B[0])):
+
+        for k in range(len(B)):
+            result[i][j] += A[i][k] * B[k][j]
+
+for r in result:
+    print(r)
+result = [[0,0,0],
+        [0,0,0],
+        [0,0,0]]
+print("Addition")
+for i in range(len(A)):
+    # iterate through columns
+    for j in range(len(B[0])):
+        result[i][j] = A[i][j] + B[i][j]
+
+for r in result:
+    print(r)
+"""Output
+Multiplication
+[114, 160, 60]
+[74, 97, 73]
+[119, 157, 112]
+Addition
+[17, 15, 4]
+[10, 12, 9]
+[11, 13, 18]
+"""#4. Write short note on string concatination operator (+) and string multipication operator(*)
+"""String concatenation operator is used to add two or more strings while string multiplication operator
+is used to get copies of a string"""#40. WAP find a pair with a given sum in the array
+l=[1,2,3,4,5,6,7]
+sum=int(input())
+for i in range(len(l)):
+    for j in range(i,len(l)):
+        diff=sum-l[j]
+        if(diff in l):
+            print(diff,l[j])
+"""Output
+4
+3 1
+2 2
+1 3
+2 2
+1 3
+1 3
+"""#41. WAP to move all zeros to the end of an Array.def pushZerosToEnd(arr, n):
+def pushZerosToEnd(arr, n):
+    count = 0
+    for i in range(n):
+        if arr[i] != 0:
+            arr[count] = arr[i]
+            count+=1
+    while count < n:
+        arr[count] = 0
+        count += 1
+arr = [10, 6, 8, 0, 0, 0, 22, 7, 0, 6, 0, 95]
+n = len(arr)
+pushZerosToEnd(arr, n)
+print(arr)
+"""Output
+[1, 9, 8, 4, 2, 7, 6, 9, 0, 0, 0, 0]
+"""
+#42. WAP to Move all zeros to the Start of an Array.
+l=[1,2,3,0,0,4,0,10,0,4]
+l1=[]
+for i in range(len(l)):
+    if(l[i]!=0):
+        l1.append(l[i])
+    else:
+        l1.insert(0,l[i])
+print(l1)
+"""Output
+[0, 0, 0, 0, 1, 2, 3, 4, 10, 4]
+"""#43. WAP to Find the mean and median of an unsorted array.
+
+def findMean(a, n):
+    sum = 0
+    for i in range(0, n):
+        sum += a[i]
+
+    return float(sum / n)
+def findMedian(a, n):
+    sorted(a)
+    if n % 2 != 0:
+        return float(a[int(n / 2)])
+
+    return float((a[int((n - 1) / 2)] +
+                  a[int(n / 2)]) / 2.0)
+a = [1, 3, 4, 2, 7, 5,9,11, 8, 6]
+n = len(a)
+print("Mean =", findMean(a, n))
+print("Median =", findMedian(a, n))
+"""Output
+Mean = 5.6
+Median = 6.0
+"""
+#44. WAP to Segregate 0s and 1s in an array
+
+l=[1,3,5,0,0,1,0,33,8]
+for i in range(len(l)):
+    if(l[i]==1):
+        print(1,end="")
+print("\n")
+for i in range(len(l)):
+    if(l[i]==0):
+        print(0,end="")
+"""Output
+11
+
+000
+"""
+#41. WAP to find the median of two sorted arrays of different sizes.
+def findMedian(a, n):
+    sorted(a)
+    if n % 2 != 0:
+        return float(a[int(n / 2)])
+
+    return float((a[int((n - 1) / 2)] +
+                  a[int(n / 2)]) / 2.0)
+
+l1=[1,2,3,4,5,6,7]
+l2=[4,5,6,7,8]
+m1=findMedian(l1,len(l1))
+m2=findMedian(l2,len(l2))
+print(m1,m2)
+
+"""Output
+4.0 6.0"""
+#45. WAP to sort an array [9, 1, 5, 6, 8, 3, 2, 4, 7, 10]
+
+import numpy as np
+arr = np.array([9, 1, 5, 6, 8, 3, 2, 4, 7, 10])
+arr = sorted(arr)
+print(arr)
+sorted_array = [0 for i in range(len(arr))]
+order = {"1": "Ascending Order", "2": "Descending Order"}
+print(order)
+want = int(input("Give your response as 1/2: "))
+if(want == 1):
+    print("Ascending order")
+    for i in range(len(arr)):
+        print(arr[i], end=" ")
+elif(want == 2):
+    print("Descending Order")
+    for i in range(len(arr)):
+        sorted_array[len(arr)-1-i] = arr[i]
+    for i in range(len(sorted_array)):
+        print(sorted_array[i], end = " ")
+else:
+    pass
+
+"""Output
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+{'1': 'Ascending Order', '2': 'Descending Order'}
+Give your response as 1/2: 1
+Ascending order
+1 2 3 4 5 6 7 8 9 10 """#43. WAP to find the Max sum contiguous subarray.
+l=[1,2,3,4,5,6]
+m=max(l)
+print(l)
+print(m)
+"""Output
+[1, 2, 3, 4, 5, 6]
+6"""#44. WAP to find a pair with maximum product in an array.
+m=0
+l=[1,2,3,4,7,5,0]
+for i in range(len(l)-1):
+    for j in range(i+1,len(l)):
+        x=l[i]*l[j]
+        if(x>m):
+            m=x
+            a,b=l[i],l[j]
+print("Pairs are",a,b)
+"""Output
+Pairs are 7 5
+"""
+#45. WAP to sort an array [9, 1, 5, 6, 8, 3, 2, 4, 7, 10]
+l=[9, 1, 5, 6, 8, 3, 2, 4, 7, 10]
+m=l.sort()
+print(m)
+"""Output
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+"""#46. WAP to read and print a two dimensional array.
+l=[]
+r=int(input())
+l=[[int(i) for i in input().split()]for j in range(r)]
+print(l)
+"""Output
+4
+1 2 3
+4 5 6
+7 8 9
+10 11 23
+[[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 23]]"""#49. WAP to add two matrices of the same size
+
+import numpy as np
+r1 = int(input("Enter the number of rows for first matrix: "))
+c1 = int(input("Enter the number of columns for second: "))
+
+m1= np.array([[input() for j in range(c1)] for i in range(r1)])
+print(m1)
+
+r2 = int(input("Enter the number of rows for first matrix: "))
+c2 = int(input("Enter the number of columns for second: "))
+m2 = np.array([[input() for j in range(c2)] for i in range(r2)])
+print(m2)
+
+sum_m = np.array([[0 for j in range(c2)] for i in range(r2)])
+
+for i in range(len(m1)):
+    for j in range(len(m1[0])):
+        sum_m[i][j] += int(m1[i][j])+int(m2[i][j])
+print(sum_m)
+
+"""Output
+
+Enter the number of rows for first matrix: 2
+Enter the number of columns for second: 2
+1
+2
+3
+4
+[['1' '2']
+ ['3' '4']]
+Enter the number of rows for first matrix: 2
+Enter the number of columns for second: 2
+10
+20
+40
+12
+[['10' '20']
+ ['40' '12']]
+[[11 21]
+ [43 16]]""""""5. Input : a = 20 b = 10
+Note down the output of below operations
+a>b
+a>=b
+a<b
+a<=b"""
+a=20
+b=20
+print(a>b)
+print(a>=b)
+print(a<b)
+print(a<=b)
+"""Output
+False
+True
+False
+True
+"""#47. WAP to compare two arrays, print "Equal" if elements in array_1 are matching with elements in array_2
+l1=[]
+l1=[int(x) for x in input().split()]
+l2=[]
+l2=[int(x) for x in input().split()]
+flag=0
+if(len(l1)!=len(l2)):
+    flag=1
+for i in range((len(l1))):
+    if(l1[i] not in l2):
+        flag=1
+if(flag==0):
+    print("Equal")
+else:
+    print("Unequal")
+"""Output
+1 2 3 4
+1 2 3 4
+Equal"""
+#48. WAP to find the common elements between two arrays
+l1=[]
+l1=[int(x) for x in input().split()]
+l2=[]
+l2=[int(x) for x in input().split()]
+for i in range(len(l1)):
+    if(l1[i] in l2):
+        print(l1[i],end="")
+
+"""Output
+1 2 3 4 5
+2 3 7 8
+2 3"""
+#50. WAP to check whether a given matrix is Lower Triangular Matrix or not.
+
+M = [[1, 0, 0, 0],
+     [1, 4, 0, 0],
+     [4, 6, 2, 0],
+     [0, 4, 7, 6]]
+
+flag=0
+for i in range(0, len(M)):
+        for j in range(i + 1, len(M)):
+            if(M[i][j] != 0):
+                    flag=1
+if(flag==1):
+    print("It is not a lower triangular matrix")
+else:
+    print("It is a lower triangular matrix")
+
+"""Output
+It is a lower triangular matrix"""
+#51. WAP to print boundary elements of the matrix.
+
+a = [ [ 1, 2, 3, 4 ], [ 5, 6, 7, 8 ],
+    [ 1, 2, 3, 4 ], [ 5, 6, 7, 8 ] ]
+m=4
+n=4
+for i in range(m):
+        for j in range(n):
+            if (i == 0):
+                print (a[i][j])
+            elif (i == m-1):
+                print (a[i][j])
+            elif (j == 0):
+                print (a[i][j])
+            elif (j == n-1):
+                print (a[i][j])
+            else:
+                print (" ")
+"""Output
+1
+2
+3
+4
+5
+ 
+ 
+8
+1
+ 
+ 
+4
+5
+6
+7
+8
+"""#52. WAP to create a matrix and fill it with prime numbers.
+
+def prime(num):
+    flag=0
+    if num > 1:
+        for i in range(2, int(num / 2) + 1):
+            if (num % i) == 0:
+                flag=1
+                break
+        else:
+            flag=0
+    return(flag)
+
+r=int(input())
+c=int(input())
+l=[]
+for i in range(r):
+    a=[]
+    for j in range(c):
+        x=int(input())
+        flag=prime(x)
+        if(flag==0):
+            a.append(x)
+        else:
+            print("Not prime")
+    l.append(a)
+print(l)
+"""Output
+3
+3
+3
+5
+7
+2
+9
+Not prime
+11
+13
+19
+17
+[[3, 5, 7], [2, 11], [13, 19, 17]]"""
+#53. WAP to merge and sort two one dimensional arrays.
+
+import numpy as np
+a1 = [7, 6, 2, 4]
+a2 = [1, 2, 3, 9]
+
+w = [np.nan for i in range(len(a1) + len(a2))]
+a1_iterator, a2_iterator, w_iterator = 0, 0, 0
+while (a1_iterator < len(a1)):
+    w[w_iterator] = a1[a1_iterator]
+    a1_iterator += 1
+    w_iterator += 1
+while (a2_iterator < len(a2)):
+    w[w_iterator] = a2[a2_iterator]
+    a2_iterator += 1
+    w_iterator += 1
+
+print("The new sorted array: ", sorted(w))
+
+"""Output
+The new sorted array:  [1, 2, 2, 3, 4, 6, 7, 9]"""
+#54. WAP find union and intersection of 2 arrays
+l1=[1,3,5,7,9,2,8]
+l2=[1,6,8,12,9,4]
+union=[]
+inter=[]
+for i in range(len(l1)):
+    union.append(l1[i])
+for i in range(max(len(l1),len(l2))):
+    if(l1[i] not in inter and l1[i] not in l2):
+        inter.append(l1[i])
+for i in range(len(l2)):
+    if(l2[i] not in union):
+        union.append(l2[i])
+print(union)
+print(inter)
+"""Output
+[1, 3, 5, 7, 9, 2, 8, 6, 12, 4]
+[3, 5, 7, 2]
+"""#55. WAP to find whether given number x appears more than n/2 times in a sorted array of size n
+
+l=[1,2,4,4,4,7]
+n=len(l)
+x=int(input())
+count=0
+for i in range(len(l)):
+    if(l[i]==x):
+        count+=1
+if(count>n//2):
+    print("It accours more than n//2 times")
+else:
+    print("Occurs less times")
+
+"""Output
+4
+Occurs less times
+"""#56. WAP to accept a matrix of order n*m and interchange the diagonals
+def interchangeDiagonals(array,N):
+    # swap elements of diagonal
+    for i in range(N):
+        if (i != N / 2):
+            temp = array[i][i];
+            array[i][i] = array[i][N - i - 1];
+            array[i][N - i - 1] = temp;
+
+    for i in range(N):
+        for j in range(N):
+            print(array[i][j], end=" ");
+        print();
+
+array = [[4, 5, 6], [1, 2, 3], [7, 8, 9]];
+print(array)
+
+interchangeDiagonals(array,3);
+"""Otput
+[[4, 5, 6], [1, 2, 3], [7, 8, 9]]
+6 5 4 
+1 2 3 
+9 8 7 
+"""#57. WAP to perform matrix multiplication
+A = [[12, 7, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+
+B = [[5, 8, 1, 2],
+     [6, 7, 3, 0],
+     [4, 5, 9, 1]]
+result = [[0, 0, 0, 0],
+          [0, 0, 0, 0],
+          [0, 0, 0, 0]]
+
+for i in range(len(A)):
+
+    for j in range(len(B[0])):
+
+        for k in range(len(B)):
+            result[i][j] += A[i][k] * B[k][j]
+
+for r in result:
+    print(r)
+"""Output
+[114, 160, 60, 27]
+[74, 97, 73, 14]
+[119, 157, 112, 23]
+"""#59. WAP to get median of two sorts arrays
+import numpy as np
+a1 = np.array([2, 8, 5, 6, 1])
+a2 = np.array([8, 5, 9, 5])
+
+tot = len(a1) + len(a2)
+final = [0] * tot
+first = 0
+second = 0
+iterator = 0
+while iterator < tot:
+    if first < len(a1):
+        final[iterator] = a1[first]
+        first += 1
+        iterator += 1
+    if second < len(a2):
+        final[iterator] = a2[second]
+        second += 1
+        iterator += 1
+
+final_array = sorted(final)
+
+if len(a1) % 2 == 1:
+    median = final_array[len(a1) // 2]
+    print("\nMedian= ", median)
+else:
+    median = (final_array[tot // 2] + (final_array[(tot // 2) - 1])) / 2.0
+    print("\nMedian= ", median)
+
+print(final_array)
+
+"""Output
+Median=  5
+[1, 2, 5, 5, 5, 6, 8, 8, 9]""""""5. Input : a = "abc" b = "cde" c = "abc"
+Note down the output of below operations
+a>b
+a>=b
+a<b
+a<=b
+
+a>c
+a>=c
+a<c
+a<=c"""
+a="abc"
+b="cde"
+c="abc"
+print(a>b)
+print(a>=b)
+print(a<b)
+print(a<=b)
+
+print(a>c)
+print(a>=c)
+print(a<c)
+print(a<=c)
+
+"""Output
+False
+False
+True
+True
+False
+True
+False
+True
+"""#58. WAP to perform a binary search in a given array
+def binary_search(arr, low, high, x):
+    if high >= low:
+        mid = (high + low) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] > x:
+            return binary_search(arr, low, mid - 1, x)
+        else:
+            return binary_search(arr, mid + 1, high, x)
+
+    else:
+        return -1
+
+arr = [2, 3, 4, 10, 40]
+x = 10
+result = binary_search(arr, 0, len(arr) - 1, x)
+
+if result != -1:
+    print("Element is present at index", str(result))
+else:
+    print("Element is not present in array")
+"""Output
+Element is present at index 3""""""60. WAP to add list of elements to a given set
+Input
+set_1 = {"a", "b", "c"}
+list_1 = ["b", "d", "e"]"""
+
+set_1 ={"a", "b", "c"}
+list_1 = ["b", "d", "e"]
+for elem in list_1:
+    set_1.add(elem)
+print(set_1)
+"""Output
+{'b', 'd', 'e', 'c', 'a'}
+"""#61. Create the set and print its element values, type and id
+
+set = {"a", "b", "c"}
+print(set)
+print(type(set))
+print(id(set))
+"""Output
+{'a', 'c', 'b'}
+<class 'set'>
+2290063809224
+"""#62. Create set using set function
+print(set(('a', 'e', 'i', 'o', 'u')))
+
+"""Output
+{'i', 'a', 'o', 'e', 'u'}
+"""#63. Find ways to create an empty set
+x = set()
+print(x)
+"""Output
+set()""""""64. Create set and add new element into it and update existing elements. Notedown the difference between add and update functions"""
+set = {"a", "b", "c"}
+print(set)
+set.add('d')
+print(set)
+set.update('e')
+print(set)
+"""Output
+{'c', 'b', 'a'}
+{'c', 'b', 'a', 'd'}
+{'c', 'd', 'b', 'e', 'a'}
+
+add() function add a single element to the set, whereas update() function iterates over the given sequences and 
+adds them to the set. Therefore, as compared to update() function, add() is better in performance.
+""""""65. Create a set and perform below operations on it
+	copy
+	pop
+	remove
+	discard
+	clear"""
+set={'a','b','c','d','e','f','g'}
+print(set)
+set.pop()
+print(set)
+set.remove('b')
+print(set)
+set.discard('d')
+print(set)
+set.clear()
+print(set)
+
+"""Output
+{'f', 'c', 'g', 'a', 'b', 'e', 'd'}
+{'c', 'g', 'a', 'b', 'e', 'd'}
+{'c', 'g', 'a', 'e', 'd'}
+{'c', 'g', 'a', 'e'}
+set()
+""""""66. Create two sets and perform below operations
+	union
+	intersaction
+	difference
+	symmetric_difference
+	symmetric_difference_update
+	issuperset
+	issubset
+	isdisjoint
+	intersection_update"""
+
+X = frozenset([1, 2, 3, 4, 5])
+Y = frozenset([3, 4, 5, 6, 7])
+print(X.union(Y))
+print(X.isdisjoint(Y))
+print(X.intersection(Y))
+print(X.difference(Y))
+print(X.symmetric_difference(Y))
+print(X.isdisjoint(Y))
+print(X.issubset(Y))
+print(X.issuperset(Y))
+print(X | Y)
+"""Output
+frozenset({1, 2, 3, 4, 5, 6, 7})
+False
+frozenset({3, 4, 5})
+frozenset({1, 2})
+frozenset({1, 2, 6, 7})
+False
+False
+False
+frozenset({1, 2, 3, 4, 5, 6, 7})"""#67. Createa set and apply menbersiop operations on it (i and not in)
+l=[1,2,3,4,5]
+l1=[3,4,5,7,8,9]
+for i in l:
+    if(i in l1):
+        print(i,"is Member")
+    else:
+        print(i,"is not member")
+"""Output
+1 is not member
+2 is not member
+3 is Member
+4 is Member
+5 is Member"""
+#68. What is set comprehension and how it works. Explain is detail with example.
+
+"""The key aspect of set comprehension that makes it unique is that it returns a set, which means the elements
+inside will be unordered and cannot contain any duplicates."""#7. Using logical operators: WAPTP "Student is passed" if he scores 40+ marks in both Physics and Maths
+phy=int(input())
+math=int(input())
+if(phy>40 and math>40):
+    print("Student is passed")
+
+"""Output
+45
+67
+Student is passed
+""""""6. Note down the output of below operations
+Input a = 10 b = 20 c = 10 d = 10
+a==b
+a!=b
+a==c==d
+
+Input a = "abc" b = "cde" c = "abc" d = "abc"
+a==b
+a!=b
+a==c
+a!=c
+a==c==d"""
+a=10
+b=20
+c=10
+d=10
+print(a==b)
+print(a!=b)
+#print(a==c)
+#print(a!=c)
+print(a==c==d)
+a="abc"
+b="cde"
+c="abc"
+d="abc"
+print(a==b)
+print(a!=b)
+print(a==c)
+print(a!=c)
+print(a==c==d)
+"""Output
+False
+True
+True
+False
+True
+True
+False
+True
+"""#69. What is nested set comprehension and how it works. Explain is detail with example.
+
+"""As with list and dictionary comprehensions, you can nest one set comprehension within another, although there
+is one very important caveat. In general with Python, when it comes to sets inside sets, the inner sets have to be
+frozen sets, or you will get an error. A frozen set is just like a set, although sets are mutable and frozen sets
+are not. The reason we need to do this is that mutable objects cannot be accessed with hash-based memory lookups,
+which is required for a set to function properly. In other words, sets are mutable, which makes them unhashable,
+and therefore they cannot exist as elements within a larger set unless they are frozen."""#70. What is frozenset, explain in detial with example
+
+"""The frozenset() is an inbuilt function is Python which takes an iterable object as input and makes them
+immutable. Simply it freezes the iterable objects and makes them unchangeable"""#8. Using logical operators: WAPTP "Student is failed" if he scores 40- marks in atleast one subject from Physics and Maths
+
+phy=int(input())
+math=int(input())
+if(phy<40 or math<40):
+    print("Student is failed")
+
+"""Output
+25
+78
+Student is failed
+""""""9. Using logical operators: WAPTP "Student is failed" if valus of isPassed is True then print 
+"Student is passed" else print "Student is failed"""
+isPassed=input()
+if(isPassed=="True"):
+    print("Student is Passed")
+else:
+    print("Student is failed")
+
+"""Output
+True
+Student is Passed
+""""""1. Write short notwe on below
+
+Arithmetic operators
+Assignment operators
+Comparison operators
+Logical operators
+Identity operators
+Membership operators
+Bitwise operators"""
+
+""" Arithmetic operators are used with numeric values to perform common mathematical operations. eg- +,-, *, /
+Assignment operators are used to assign values to variables. eg- +=, =, -=, *=
+Comparison operators are used to compare two values. eg- ==, !=, >, <
+Logical operators are used to combine conditional statements. eg- and, or, not
+Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location. eg- is, is not
+Membership operators are used to test if a sequence is presented in an object. eg- in, not in
+Bitwise operators are used to compare (binary) numbers, eg- >>, <<, &, |"""
